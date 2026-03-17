@@ -1,0 +1,117 @@
+.target-cursor-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  width: 12px;
+  height: 12px;
+}
+
+.target-cursor-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(0, 206, 209, 0.9);
+  box-shadow: 0 0 8px rgba(0, 206, 209, 0.7), 0 0 16px rgba(0, 206, 209, 0.3);
+  transition: background 0.2s ease;
+}
+
+.target-cursor-corner {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+}
+
+.target-cursor-corner::before,
+.target-cursor-corner::after {
+  content: '';
+  position: absolute;
+  background: rgba(0, 206, 209, 0.85);
+  box-shadow: 0 0 6px rgba(0, 206, 209, 0.4);
+}
+
+.corner-tl {
+  top: 0;
+  left: 0;
+  transform: translate(-18px, -18px);
+}
+
+.corner-tl::before {
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 10px;
+}
+
+.corner-tl::after {
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 2px;
+}
+
+.corner-tr {
+  top: 0;
+  right: 0;
+  transform: translate(6px, -18px);
+}
+
+.corner-tr::before {
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 10px;
+}
+
+.corner-tr::after {
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 2px;
+}
+
+.corner-br {
+  bottom: 0;
+  right: 0;
+  transform: translate(6px, 6px);
+}
+
+.corner-br::before {
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  height: 10px;
+}
+
+.corner-br::after {
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 2px;
+}
+
+.corner-bl {
+  bottom: 0;
+  left: 0;
+  transform: translate(-18px, 6px);
+}
+
+.corner-bl::before {
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 10px;
+}
+
+.corner-bl::after {
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  height: 2px;
+}
